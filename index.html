@@ -32,14 +32,88 @@
 
     <!-- Project script -->
     <script>
+        // $.ajax({
+        //     url: "https://currency-exchange.p.rapidapi.com/listquotes",
+        //     headers: {"X-RapidAPI-Key": "37145f54b9mshda39c23a63a99d9p11f1dajsn7ba7fab03fc0"},
+        //     method: "GET"
+        // }).then(function (response) {
+        //     console.log(response)
+
+        // });
+
+        // $.ajax({
+        //     url: "https://currency-exchange.p.rapidapi.com/exchange?q=1.0&from=CAD&to=USD",
+        //     headers: {"X-RapidAPI-Key": "37145f54b9mshda39c23a63a99d9p11f1dajsn7ba7fab03fc0"},
+        //     method: "GET"
+        // }).then(function (response) {
+        //     console.log(response)
+
+        // });
+
+        // $.ajax({
+        //     url: "https://currency-exchange.p.rapidapi.com/exchange?q=1.0&from=USD&to=MXN",
+        //     headers: {"X-RapidAPI-Key": "37145f54b9mshda39c23a63a99d9p11f1dajsn7ba7fab03fc0"},
+        //     method: "GET"
+        // }).then(function (response) {
+        //     console.log("$1 USD = $" + response + " MXN")
+
+        // });
+
+
+        // $.ajax({
+        //     url: "https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all",
+        //     headers: {"X-RapidAPI-Key": "37145f54b9mshda39c23a63a99d9p11f1dajsn7ba7fab03fc0"},
+        //     method: "GET"
+        // }).then(function (response) {
+        //     console.log(response[142]);
+
+        // });
+
+
+
+        // $.ajax({
+        //     url: "http://app.toronto.ca/nm/notices.json?locationId=1",
+        //     method: "GET"
+        // }).then(function (response) {
+        //     console.log(response.Records);
+
+        // });
+
+
+
+        // $.ajax({
+        //     // url: "https://numbersapi.p.rapidapi.com/129/math?json=true",
+        //     // url: "https://numbersapi.p.rapidapi.com/random/trivia?max=20&fragment=true&min=10&json=true",
+        //     headers: {
+        //         "X-RapidAPI-Key": "37145f54b9mshda39c23a63a99d9p11f1dajsn7ba7fab03fc0"
+        //     },
+        //     method: "GET"
+        // }).then(function (response) {
+        //     console.log(response.number);
+        //     console.log(response.text);
+        //     console.log(response);
+
+
+        // });
+
+
         $.ajax({
-            url: "https://hudelabs-qriusity-v1.p.rapidapi.com/v1/questions/1",
+            url: "https://YahooWeatherAPIdimashirokovV1.p.rapidapi.com/getWeatherForecast",
             headers: {"X-RapidAPI-Key": "37145f54b9mshda39c23a63a99d9p11f1dajsn7ba7fab03fc0"},
-            method: "GET"
+            headers: {"Content-Type": "application/x-www-form-urlencoded"},
+            method: "POST"
         }).then(function (response) {
-            console.log(response)
+            console.log(result.status, result.headers, result.body);
 
         });
+
+
+
+
+
+
+
+
 
 
     </script>
