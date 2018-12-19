@@ -21,31 +21,92 @@
         crossorigin="anonymous"></script>
 
     <!-- Linking my own CSS -->
-    <!-- <link rel="stylesheet" type="text/css" href="/assets/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="gas.css">
 
 </head>
 
 <body>
 
-    <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="header">
+        <a class="navbar-brand update" href="">Update rates</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--         <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+ -->
+    </nav>
 
-    </header>
+    <div class="container">
 
-    <section id='rates'>
+        <div class="timestamp">
+            
+        </div>
 
-    </section>
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Canadian Dollar</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title" id="cad2mxn">$0 <small class="text-muted">MXN/ CAD</small></h1>
+                    <h1 class="card-title pricing-card-title" id="cad2usd">$0 <small class="text-muted">USD/ CAD</small></h1>
+                    <input class="price" type="number" id="cadpl" placeholder="CAD per litter"><br>CAD per litre
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Mexican Peso</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title" id="mxn2cad">$0 <small class="text-muted">CAD/ MXN</small></h1>
+                    <h1 class="card-title pricing-card-title" id="mxn2usd">$0 <small class="text-muted">USD/ MXN</small></h1>
+                    <input class="price" type="number" id="mxnpl" placeholder="MXN per litter"><br>MXN per litre
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">US Dollar</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title" id="usd2cad">$0 <small class="text-muted">CAD/ USD</small></h1>
+                    <h1 class="card-title pricing-card-title" id="usd2mxn">$0 <small class="text-muted">MXN/ USD</small></h1>
+                    <input class="price" type="number" id="usdpg" placeholder="USD per galon"><br>USD per gallon
+                </div>
+            </div>
+        </div>
 
-    <section id='convert'>
-        <input class="price" type="number" id="cadpl" placeholder="CAD per litter"> CAD per litre<br>
-        <input class="price" type="number" id="mxnpl" placeholder="MXN per litter"> MXN per litre<br>
-        <input class="price" type="number" id="usdpg" placeholder="USD per galon"> USD per gallon<br>
-        <button id="update">Update rates</button>
-    </section>
+        <section class="col-12" id='rates'>
 
-    <!-- HTML GOES HERE! -->
+        </section>
 
-    <!-- Project script -->
-    <script src="gas.js"></script>
+        <section class="col-12" id='convert'>
+            <button class="update">Update rates</button>
+        </section>
+
+
+        <!-- Project script -->
+        <script src="gas.js"></script>
+
+
+
+    </div>
 
 </body>
 

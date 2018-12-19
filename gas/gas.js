@@ -30,7 +30,7 @@ $(document).ready(function () {
     const rates = $("#rates");
     const convert = $("#convert");
 
-    $('#update').on('click', function () {
+    $('.update').on('click', function () {
         getIndexes();
     })
 
@@ -63,10 +63,9 @@ $(document).ready(function () {
 
     function getIndexes() {
 
-        rates.empty();
-
         var dt = new Date();
-        rates.append('<b>Last update: </b>' + dt);
+
+        $('.timestamp').empty().append('<b>Last update: </b>' + dt);
 
         // Get CAD2MXN
         $.ajax({
@@ -79,7 +78,8 @@ $(document).ready(function () {
             index = parseFloat(response).toFixed(4);
             console.log("cad2mxn: " + index);
             cad2mxn = index;
-            var newIndex1 = $("<div>").attr('data-currency', 'cad2mxn').html('<b>$1 ' + indexes[0] + '</b> = $' + cad2mxn + ' ' + indexes[1]).appendTo(rates);
+            // var newIndex1 = $("<div>").attr('data-currency', 'cad2mxn').html('<b>$1 ' + indexes[0] + '</b> = $' + cad2mxn + ' ' + indexes[1]).appendTo(rates);
+            $('#cad2mxn').html('$' + index + ' <small class="text-muted"><br>MXN/CAD</small>');
         });
 
         // Get CAD2USD
@@ -93,7 +93,8 @@ $(document).ready(function () {
             index = parseFloat(response).toFixed(4);
             console.log("cad2usd: " + index);
             cad2usd = index;
-            var newIndex2 = $("<div>").attr('data-currency', 'cad2usd').html('<b>$1 ' + indexes[0] + '</b> = $' + cad2usd + ' ' + indexes[2]).appendTo(rates);
+            // var newIndex2 = $("<div>").attr('data-currency', 'cad2usd').html('<b>$1 ' + indexes[0] + '</b> = $' + cad2usd + ' ' + indexes[2]).appendTo(rates);
+            $('#cad2usd').html('$' + index + ' <small class="text-muted"><br>USD/CAD</small>');
         });
 
         // Get MXN2CAD
@@ -107,7 +108,8 @@ $(document).ready(function () {
             index = parseFloat(response).toFixed(4);
             console.log("mxn2cad: " + index);
             mxn2cad = index;
-            var newIndex3 = $("<div>").attr('data-currency', 'cad2mxn').html('<b>$1 ' + indexes[1] + '</b> = $' + mxn2cad + ' ' + indexes[0]).appendTo(rates);
+            // var newIndex3 = $("<div>").attr('data-currency', 'cad2mxn').html('<b>$1 ' + indexes[1] + '</b> = $' + mxn2cad + ' ' + indexes[0]).appendTo(rates);
+            $('#mxn2cad').html('$' + index + ' <small class="text-muted"><br>CAD/MXN</small>');
         });
 
         // Get MXN2USD
@@ -121,7 +123,8 @@ $(document).ready(function () {
             index = parseFloat(response).toFixed(4);
             console.log("mxn2usd: " + index);
             mxn2usd = index;
-            var newIndex4 = $("<div>").attr('data-currency', 'cad2usd').html('<b>$1 ' + indexes[1] + '</b> = $' + mxn2usd + ' ' + indexes[2]).appendTo(rates);
+            // var newIndex4 = $("<div>").attr('data-currency', 'cad2usd').html('<b>$1 ' + indexes[1] + '</b> = $' + mxn2usd + ' ' + indexes[2]).appendTo(rates);
+            $('#mxn2usd').html('$' + index + ' <small class="text-muted"><br>USD/MXN</small>');
         });
 
         // Get USD2CAD
@@ -135,7 +138,8 @@ $(document).ready(function () {
             index = parseFloat(response).toFixed(4);
             console.log("usd2cad: " + index);
             usd2cad = index;
-            var newIndex5 = $("<div>").attr('data-currency', 'cad2mxn').html('<b>$1 ' + indexes[2] + '</b> = $' + usd2cad + ' ' + indexes[0]).appendTo(rates);
+            // var newIndex5 = $("<div>").attr('data-currency', 'cad2mxn').html('<b>$1 ' + indexes[2] + '</b> = $' + usd2cad + ' ' + indexes[0]).appendTo(rates);
+            $('#usd2cad').html('$' + index + ' <small class="text-muted"><br>CAD/USD</small>');
         });
 
         // Get USD2MXN
@@ -149,7 +153,8 @@ $(document).ready(function () {
             index = parseFloat(response).toFixed(4);
             console.log("usd2mxn: " + index);
             usd2mxn = index;
-            var newIndex6 = $("<div>").attr('data-currency', 'cad2usd').html('<b>$1 ' + indexes[2] + '</b> = $' + usd2mxn + ' ' + indexes[1]).appendTo(rates);
+            // var newIndex6 = $("<div>").attr('data-currency', 'cad2usd').html('<b>$1 ' + indexes[2] + '</b> = $' + usd2mxn + ' ' + indexes[1]).appendTo(rates);
+            $('#usd2mxn').html('$' + index + ' <small class="text-muted"><br>MXN/USD</small>');
         });
     }
     getIndexes();
